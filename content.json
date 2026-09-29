@@ -1,0 +1,163 @@
+{
+	"aboutme": {
+		"paragraphs": [
+			"Hi! I'm Spire, a Mechatronics Engineer that occasionally streams building keyboards on this Twitch channel: <a href=\"https://www.twitch.tv/MissPyre\" target=\"_blank\" class=\"icon brands fa-twitch\"><span class=\"label\">Twitch</span></a><a href=\"https://www.twitch.tv/MissPyre\" target=\"_blank\">MissPyre</a>",
+			"My commissions are mostly focused towards people with little knowledge about keyboards, so I'm used to guiding them towards their ideal build. I keep budget under control by showing people their options when it comes to price vs quality.",
+			"That said, I can also work with more complicated builds and I'm happy to have conversations with knowledgeable people who can provide a challenge!"
+		]
+	},
+
+	"gallery": [
+		{
+			"title": "My first keyboard!",
+			"image": "images/keyboards/20200821_195550.jpg",
+			"board": "???",
+			"switches": "MX Cherry Red",
+			"keycaps": "???",
+			"description": "This was made out of cheap off-brand parts from Aliexpress.",
+			"form_factor": "65%"
+		},
+		{
+			"title": "My second keyboard",
+			"image": "images/keyboards/20200826_170631.jpg",
+			"board": "Quefrency rev2",
+			"switches": "MX Cherry Brown",
+			"keycaps": "Combination",
+			"description": "The keycaps are a combination of 2 sets of blank Cherry profile keycaps.",
+			"form_factor": "65%"
+		},
+		{
+			"title": "Commission",
+			"image": "images/keyboards/20210120_160435.jpg",
+			"board": "KBD67 rev2 (modded)",
+			"switches": "Sakurios",
+			"keycaps": "Combination",
+			"description": "The PCB was modified with Millmax hotswap sockets. The case is the <i>Tofu65</i> frosted acrylic case and the keycaps are Cherry profile KP Republic FR with some Tai-Hao rubber accents.",
+			"form_factor": "65%"
+		},
+		{
+			"title": "Extra parts build",
+			"image": "images/keyboards/20210312_223352.jpg",
+			"board": "KBD67 rev2 (modded)",
+			"switches": "Kailh Speed Copper",
+			"keycaps": "Blank KAT",
+			"description": "Like the name suggests, this keyboard was made from leftover parts! The PCB was modified with Millmax hotswap sockets and a wired shortcircuit. The case is a <i>KBDFans</i> 65% low profile anodised aluminium case.",
+			"form_factor": "65%"
+		},
+		{
+			"title": "Commission",
+			"image": "images/keyboards/20210517_212202.jpg",
+			"board": "Quefrency rev2",
+			"switches": "Kailh Pro Burgundy",
+			"keycaps": "Combination",
+			"description": "The keycaps are the leftover Cherry profile keys from my second keyboard.",
+			"form_factor": "65%"
+		},
+		{
+			"title": "Personal macropad",
+			"image": "images/keyboards/20210913_163523.jpg",
+			"board": "Kyria",
+			"switches": "Kailh Choc White",
+			"keycaps": "Blank Choc",
+			"description": "The underglow LEDs were hand-soldered.",
+			"form_factor": "other"
+		},
+		{
+			"title": "First attempt at designing a macropad",
+			"image": "images/keyboards/20211019_160833.jpg",
+			"description": "This was meant to be a fully hotswap (Kailh sockets) macropad with per-key and underglow LEDs and an inbuilt MCU. Unfortunately, the electronics surrounding the MCU were designed incorrectly so this PCB did not work.",
+			"form_factor": "other",
+			"keywords": ["custom"]
+		},
+		{
+			"title": "Commission",
+			"note": "(image captured from stream)",
+			"image": "images/keyboards/khau.png",
+			"board": "KBD67 (modded)",
+			"switches": "Glorious Panda",
+			"keycaps": "Corsair",
+			"description": "The PCB was modified with Millmax hotswap sockets. The case is the <i>Tofu65</i> frosted acrylic case and the keycaps are from an old Cherry profile Corsair keyboard.",
+			"showcase": "https://clips.twitch.tv/DeadDreamyDogeLeeroyJenkins-ElHYgYNLFxPWaFG9",
+			"form_factor": "65%"
+		},
+		{
+			"title": "Commission",
+			"note": "(image captured from stream)",
+			"image": "images/keyboards/capskii.png",
+			"board": "DZ60",
+			"switches": "Gateron Brown",
+			"keycaps": "KAT DP0385",
+			"description": "The case is a <i>KBDFans</i> 60% low profile aluminium case.",
+			"showcase": "https://www.twitch.tv/MissPyre/clip/BadGloriousBoarCclamChamp-8zAuI_QP6WXkfTzM",
+			"form_factor": "60%"
+		},
+		{
+			"title": "Commission",
+			"image": "images/keyboards/20211209_221032.jpg",
+			"board": "KBD75",
+			"switches": "Gateron Brown",
+			"keycaps": "Cherry Dolch",
+			"description": "The case is a <i>KBDFans</i> 75% anodised aluminium case with an acrylic midlayer.",
+			"showcase": "https://www.twitch.tv/videos/1229367237",
+			"form_factor": "75%"
+		},
+		{
+			"title": "Commission",
+			"image": "images/keyboards/20220628_213805.jpg",
+			"board": "Orange Boy Ergo",
+			"switches": "Kailh Pro Burgundy",
+			"keycaps": "XDA Happy Planet",
+			"description": "This kit has an LED strip soldered on the back.",
+			"showcase": "https://www.twitch.tv/videos/1517452314",
+			"form_factor": "60%"
+		},
+		{
+			"title": "Second attempt at designing a macropad",
+			"image": "images/keyboards/20220905_163701.jpg",
+			"board": "My own custom design",
+			"switches": "Kailh Pro Polias",
+			"keycaps": "Combination",
+			"description": "This PCB uses Promicro microcontroller breakout header pins instead of having an onboard MCU. For this iteration I also added a front and back plate for aesthetics. Unfortunately, I used the wrong schematic symbol for the per-key LEDs, so they don't work. Everything else does, though!",
+			"form_factor": "other",
+			"keywords": ["custom"]
+		},
+		{
+			"title": "0xC.pad",
+			"image": "images/keyboards/20220905_163823.jpg",
+			"board": "0xC.pad",
+			"switches": "Kailh Choc Robin",
+			"keycaps": "Hexagon",
+			"description": "The kit came with front and back plates made from anodised aluminium and hexagon Choc keycaps.",
+			"form_factor": "other"
+		},
+		{
+			"title": "First 60% keyboard design",
+			"image": "images/keyboards/20221120_210935.jpg",
+			"board": "My own design",
+			"switches": "Kailh Choc Burnt Orange",
+			"keycaps": "MBK Glow Keycaps",
+			"description": "This was my first design for a 60% split keyboard. Both halves of the keyboard are connected through a serial connection shared through a TRRS cable.",
+			"form_factor": "60%",
+			"keywords": ["custom", "split"]
+		}
+	],
+
+	"request": {
+		"intro": "Please fill in the Google form below! I won't see your answer until you press the Submit button at the very end.",
+		"formUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdja_2cHawWF24CubHfWV9wl-P60KoaGuycgZB_KGjvCrtD5w/viewform?embedded=true",
+		"formHeight": 2300
+	},
+
+	"contact": {
+		"intro": [
+			"The best way to contact me is through Discord, but you can also contact me through email or Twitch!",
+			"Click on the buttons below to see my socials."
+		],
+		"links": [
+			{ "label": "Discord", "url": "https://discord.gg/EksFrcd", "icon": "brands fa-discord" },
+			{ "label": "Email", "url": "mailto:spireblues@gmail.com", "icon": "solid fa-envelope" },
+			{ "label": "Twitch", "url": "https://www.twitch.tv/MissPyre", "icon": "brands fa-twitch" },
+			{ "label": "Instagram", "url": "https://www.instagram.com/nano.cloudboi/", "icon": "brands fa-instagram" }
+		]
+	}
+}

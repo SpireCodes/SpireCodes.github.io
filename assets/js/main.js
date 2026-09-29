@@ -69,6 +69,39 @@
 		var	delay = 325,
 			locked = false;
 
+		// Runs a layout change, then slides the nav from where it was to where it ends up.
+			function slideNav(change) {
+
+				var nav = $nav[0],
+					before = nav.getBoundingClientRect().top,
+					offset;
+
+				change();
+
+				offset = before - nav.getBoundingClientRect().top;
+
+				if (!offset)
+					return;
+
+				$nav.css({ transition: 'none', transform: 'translateY(' + offset + 'px)' });
+				nav.offsetHeight;
+				$nav.css({ transition: 'transform ' + delay + 'ms ease-in-out', transform: 'translateY(0)' });
+
+				setTimeout(function() {
+					$nav.css({ transition: '', transform: '' });
+				}, delay);
+
+			}
+
+			function markCurrent(id) {
+
+				$nav.find('a')
+					.removeClass('is-current')
+					.filter('[href="#' + id + '"]')
+						.addClass('is-current');
+
+			}
+
 		// Methods.
 			$main._show = function(id, initial) {
 
@@ -77,6 +110,8 @@
 				// No such article? Bail.
 					if ($article.length == 0)
 						return;
+
+				markCurrent(id);
 
 				// Handle lock.
 
@@ -91,9 +126,10 @@
 
 							// Deactivate all articles (just in case one's already active).
 								$main_articles.removeClass('active');
+								$main_articles.hide();
 
-							// Hide header, footer.
-								$header.hide();
+							// Dock nav, hide footer.
+								$body.addClass('is-nav-docked');
 								$footer.hide();
 
 							// Show main, article.
@@ -166,13 +202,15 @@
 						// Show article.
 							setTimeout(function() {
 
-								// Hide header, footer.
-									$header.hide();
-									$footer.hide();
+								// Dock nav, hide footer, show main and article.
+									slideNav(function() {
 
-								// Show main, article.
-									$main.show();
-									$article.show();
+										$body.addClass('is-nav-docked');
+										$footer.hide();
+										$main.show();
+										$article.show();
+
+									});
 
 								// Activate article.
 									setTimeout(function() {
@@ -205,6 +243,8 @@
 					if (!$body.hasClass('is-article-visible'))
 						return;
 
+				markCurrent(null);
+
 				// Add state?
 					if (typeof addState != 'undefined'
 					&&	addState === true)
@@ -225,9 +265,9 @@
 								$article.hide();
 								$main.hide();
 
-							// Show footer, header.
+							// Show footer, undock nav.
 								$footer.show();
-								$header.show();
+								$body.removeClass('is-nav-docked');
 
 							// Unmark as visible.
 								$body.removeClass('is-article-visible');
@@ -256,13 +296,16 @@
 				// Hide article.
 					setTimeout(function() {
 
-						// Hide article, main.
-							$article.hide();
-							$main.hide();
+						// Hide article and main, show footer, undock nav.
+							slideNav(function() {
 
-						// Show footer, header.
-							$footer.show();
-							$header.show();
+								$article.hide();
+								$main.hide();
+								$footer.show();
+								$body.removeClass('is-nav-docked');
+								$window.scrollTop(0);
+
+							});
 
 						// Unmark as visible.
 							setTimeout(function() {
@@ -307,6 +350,10 @@
 
 		// Events.
 			$body.on('click', function(event) {
+
+				// Nav clicks switch sections, so they shouldn't close the open one.
+					if ($(event.target).closest('#header nav').length)
+						return;
 
 				// Article visible? Hide.
 					if ($body.hasClass('is-article-visible'))
